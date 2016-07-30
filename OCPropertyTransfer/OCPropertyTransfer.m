@@ -7,6 +7,7 @@
 //
 
 #import "OCPropertyTransfer.h"
+#import "TransferViewController.h"
 
 static OCPropertyTransfer *sharedPlugin;
 
@@ -68,7 +69,7 @@ static OCPropertyTransfer *sharedPlugin;
     NSMenuItem *menuItem = [[NSApp mainMenu] itemWithTitle:@"Edit"];
     if (menuItem) {
         [[menuItem submenu] addItem:[NSMenuItem separatorItem]];
-        NSMenuItem *actionMenuItem = [[NSMenuItem alloc] initWithTitle:@"Do Action" action:@selector(doMenuAction) keyEquivalent:@""];
+        NSMenuItem *actionMenuItem = [[NSMenuItem alloc] initWithTitle:@"OCPropertyTransfer" action:@selector(doMenuAction) keyEquivalent:@""];
         //[actionMenuItem setKeyEquivalentModifierMask:NSAlphaShiftKeyMask | NSControlKeyMask];
         [actionMenuItem setTarget:self];
         [[menuItem submenu] addItem:actionMenuItem];
@@ -81,9 +82,19 @@ static OCPropertyTransfer *sharedPlugin;
 // Sample Action, for menu item:
 - (void)doMenuAction
 {
-    NSAlert *alert = [[NSAlert alloc] init];
-    [alert setMessageText:@"Hello, World"];
-    [alert runModal];
+//    NSAlert *alert = [[NSAlert alloc] init];
+//    [alert setMessageText:@"Hello, World"];
+//    [alert runModal];
+    [self loadWindowAndPutInFront];
+    
 }
+- (void)loadWindowAndPutInFront {
+    if (!self.windowController.window)
+        self.windowController = [[TransferViewController alloc] initWithBundle:self.bundle];
+    
+    [[self.windowController window] makeKeyAndOrderFront:self];
+//    [self.windowController reloadPackages:nil];
+}
+
 
 @end

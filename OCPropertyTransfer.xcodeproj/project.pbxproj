@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		E41510901D49B78A005BDB77 /* OCPropertyTransfer.xcscheme in Resources */ = {isa = PBXBuildFile; fileRef = E415108F1D49B78A005BDB77 /* OCPropertyTransfer.xcscheme */; };
 		E41510931D49B78A005BDB77 /* OCPropertyTransfer.m in Sources */ = {isa = PBXBuildFile; fileRef = E41510921D49B78A005BDB77 /* OCPropertyTransfer.m */; };
+		E4B9479F1D49DEF30018A9CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4B9479E1D49DEF30018A9CE /* Main.storyboard */; };
+		E4BFD4FC1D4C3F3F00DDCABF /* TransferViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4BFD4FB1D4C3F3F00DDCABF /* TransferViewController.xib */; };
+		E4BFD4FF1D4C41C200DDCABF /* TransferViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4BFD4FE1D4C41C200DDCABF /* TransferViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -17,6 +20,10 @@
 		E41510911D49B78A005BDB77 /* OCPropertyTransfer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCPropertyTransfer.h; sourceTree = "<group>"; };
 		E41510921D49B78A005BDB77 /* OCPropertyTransfer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCPropertyTransfer.m; sourceTree = "<group>"; };
 		E41510941D49B78A005BDB77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E4B9479E1D49DEF30018A9CE /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		E4BFD4FB1D4C3F3F00DDCABF /* TransferViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TransferViewController.xib; sourceTree = "<group>"; };
+		E4BFD4FD1D4C41C200DDCABF /* TransferViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransferViewController.h; sourceTree = "<group>"; };
+		E4BFD4FE1D4C41C200DDCABF /* TransferViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransferViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -41,6 +48,9 @@
 			children = (
 				E41510911D49B78A005BDB77 /* OCPropertyTransfer.h */,
 				E41510921D49B78A005BDB77 /* OCPropertyTransfer.m */,
+				E4BFD4FD1D4C41C200DDCABF /* TransferViewController.h */,
+				E4BFD4FE1D4C41C200DDCABF /* TransferViewController.m */,
+				E4BFD4FB1D4C3F3F00DDCABF /* TransferViewController.xib */,
 				E41510941D49B78A005BDB77 /* Info.plist */,
 				E415108E1D49B78A005BDB77 /* Supporting Files */,
 			);
@@ -50,6 +60,7 @@
 		E415108E1D49B78A005BDB77 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E4B9479E1D49DEF30018A9CE /* Main.storyboard */,
 				E415108F1D49B78A005BDB77 /* OCPropertyTransfer.xcscheme */,
 			);
 			name = "Supporting Files";
@@ -110,7 +121,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4BFD4FC1D4C3F3F00DDCABF /* TransferViewController.xib in Resources */,
 				E41510901D49B78A005BDB77 /* OCPropertyTransfer.xcscheme in Resources */,
+				E4B9479F1D49DEF30018A9CE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,6 +134,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4BFD4FF1D4C41C200DDCABF /* TransferViewController.m in Sources */,
 				E41510931D49B78A005BDB77 /* OCPropertyTransfer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -256,6 +270,7 @@
 				E41510991D49B78A005BDB77 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
