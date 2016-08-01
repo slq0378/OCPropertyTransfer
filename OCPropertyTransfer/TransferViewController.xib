@@ -50,7 +50,7 @@
                                     <font key="font" size="13" name=".PingFangSC-Regular"/>
                                 </buttonCell>
                             </button>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="XMD-IV-1RH">
+                            <button hidden="YES" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="XMD-IV-1RH">
                                 <rect key="frame" x="640" y="4" width="66" height="23"/>
                                 <buttonCell key="cell" type="roundRect" title="复制" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="WY3-gC-XCP">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
