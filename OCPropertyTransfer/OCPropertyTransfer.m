@@ -93,7 +93,6 @@ static OCPropertyTransfer *sharedPlugin;
         self.windowController = [[TransferViewController alloc] initWithBundle:self.bundle];
     
     [[self.windowController window] makeKeyAndOrderFront:self];
-//    [self.windowController reloadPackages:nil];
 }
 
 

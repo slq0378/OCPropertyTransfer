@@ -16,6 +16,7 @@
 
 
 @implementation TransferViewController
+
 - (id)init {
     @throw [NSException exceptionWithName:@"There's a better initializer" reason:@"Use -initWithNibName:inBundle:" userInfo:nil];
 }
@@ -42,15 +43,17 @@
     
     [self transfer:self.sourceText.string];
 }
+
+// TODO: 复制
 - (IBAction)copyClick:(NSButton *)sender {
     // 将自己的文字复制到粘贴板
-    NSPasteboard *board = [NSPasteboard generalPasteboard];
+//    NSPasteboard *board = [NSPasteboard generalPasteboard];
 //    [board setString:self.targetText.string forType:@"string"];
     
-    [board clearContents];
-    NSPasteboardItem *item = [[NSPasteboardItem alloc] init];
-    [item setString:self.targetText.string forType:@"string"];
-    [board writeObjects:[NSArray arrayWithObject:item]];
+//    [board clearContents];
+//    NSPasteboardItem *item = [[NSPasteboardItem alloc] init];
+//    [item setString:self.targetText.string forType:@"string"];
+//    [board writeObjects:[NSArray arrayWithObject:item]];
 }
 
 - (void)transfer:(NSString *)sourceStr {
