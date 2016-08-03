@@ -38,15 +38,25 @@
 - (BOOL)userNotificationCenter:(NSUserNotificationCenter *)center shouldPresentNotification:(NSUserNotification *)notification {
     return YES;
 }
+
+/// 转换
 - (IBAction)transferClick:(NSButton *)sender {
     NSLog(@"%@",self.sourceText.string);
     
     [self transfer:self.sourceText.string];
 }
-
+/// 清空输入框
 - (IBAction)clearData:(NSButton *)sender {
     self.sourceText.string = @"";
     self.targetText.string = @"";
+}
+
+/// 注意事项
+- (IBAction)attentionBtn:(NSButton *)sender {
+    NSString *str = @"如果是从word或excel中直接复制的话，\n最好经过Txt文档转换一下，\n保证源文件中是纯文本才能转换成功。";
+    NSAlert *alert = [[NSAlert alloc] init];
+    [alert setMessageText:str];
+    [alert runModal];
 }
 
 // TODO: 复制
@@ -62,7 +72,7 @@
 }
 
 - (void)transfer:(NSString *)sourceStr {
-    NSArray *arr = [self.sourceText.string componentsSeparatedByString:@"\n"];
+    NSArray *arr = [sourceStr componentsSeparatedByString:@"\n"];
     NSMutableArray *targetArr = [NSMutableArray array];
     for (NSInteger i = 0; i < arr.count; i ++) {
         if (![arr[i] isEqualToString:@"\n"] && (i % 2 == 0)) {
@@ -80,7 +90,6 @@
         [targetStr appendFormat:[NSString stringWithFormat:@"%@\n",str]];
     }
     self.targetText.string = targetStr;
-
 }
 
 
