@@ -44,6 +44,11 @@
     [self transfer:self.sourceText.string];
 }
 
+- (IBAction)clearData:(NSButton *)sender {
+    self.sourceText.string = @"";
+    self.targetText.string = @"";
+}
+
 // TODO: 复制
 - (IBAction)copyClick:(NSButton *)sender {
     // 将自己的文字复制到粘贴板
